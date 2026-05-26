@@ -16,7 +16,7 @@ MODEL = None
 @app.on_event("startup")
 def load_model():
     global MODEL
-    # Dynamically find the absolute path of the root directory
+    # Dynamically find the absolute path of the root directory file
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     model_path = os.path.join(BASE_DIR, "artifacts", "fraud_model.pkl")
     
